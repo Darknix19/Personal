@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        .container{
+            background-color: white;
+            width: 400px;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgb(0,0,0,0.3);
+            transition: 1s;
+        }
+
+        label{
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input{
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+         .buttons{
+            margin-top: 10px;
+         }
+
+        button{
+            padding: 7px 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .submit-button{
+            background-color: #007bff;
+        }
+
+        .color-button{
+            background-color: #1f9c3d;
+        }
+
+        #message{
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container" id="LoginBox">
+    <div><h2>Login Form</h2>
+
+    <label> Full Name</label>
+    <input type="text" placeholder="Enter Name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter Email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter Password">
+
+    <label>Age</label>
+    <input type="number" placeholder="Enter Age">
+    </div>
+
+    <div class="buttons">
+        <button class="submit-button" onclick="submitForm()">Submit</button>
+        <button class="color-button" onclick="changeColor()">Change Box color</button>
+    </div>
+
+    <div id="message"></div>
+    </div>
+
+    <script>
+        function changeColor(){
+            document.getElementById("LoginBox").style.backgroundColor = "#9ac7d6";
+        }
+
+        function submitForm(){
+            document.getElementById("message").innerText = "Form submitted successfully!";
+        }
+
+    </script>
+    
+</body>
+</html>
